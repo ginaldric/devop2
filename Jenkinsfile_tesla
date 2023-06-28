@@ -28,7 +28,7 @@ node{
       }
   }
   stage('7deploy2Prod'){
-    sh "sleep  50"
+    //sh "sleep  50"
     deploy adapters: [tomcat9(credentialsId: 'tomcat_credential2', path: '', url: 'http://3.126.91.229:8080/manager/html')], contextPath: null, war: 'target/*war'
   }
   stage('8emailNotification'){
